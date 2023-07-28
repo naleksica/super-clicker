@@ -1,0 +1,220 @@
+/* GLOBAL ============================================ */
+
+:root {
+    font-size: 10px;
+}
+
+.circle {
+    width: 10rem;
+    height: 10rem;
+    background: rgb(19, 19, 19);
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+main {
+    height: 100vh;
+    background: linear-gradient(rgb(197, 197, 197), rgb(129, 129, 129));
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.give-up {
+    position: absolute;
+    bottom: 10px;
+    width: 100vw;
+    display: block;
+}
+
+.give-up button {
+    margin: 0 auto;
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: rgb(150, 8, 8);
+    text-decoration: underline;
+    transition: color .1s linear;
+}
+
+.give-up button:hover {
+    color: rgb(255, 42, 42);
+}
+
+.success {
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    background: rgba(122, 122, 122, 0.699);
+    display: none;
+    text-align: center;
+}
+
+.success h2 {
+    font-size: 10rem;
+    color: rgb(116, 255, 116);
+    font-weight: 700;
+}
+
+.success p {
+    font-weight: 400;
+    margin: 2rem 0 5rem;
+}
+
+.success p span {
+    color: rgb(255, 42, 42);
+    font-weight: 700;
+}
+
+.success button {
+    margin: 0 auto;
+    display: block;
+    font-size: 3rem;
+    margin-top: 3rem;
+    padding: 2rem 5rem;
+    background: #dedede;
+    width: 80%;
+    transition: all .1s linear;
+}
+
+.success button:hover {
+    background: #151515;
+    color: #dedede;
+}
+
+.timer {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 1rem;
+    user-select: none;
+}
+
+.timer-span {
+    font-weight: 700;
+}
+
+#finalTime {
+    font-size: 4rem;
+    color: rgb(241, 241, 241);
+}
+
+.menu {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(197, 197, 197), rgb(129, 129, 129));
+    position: absolute;
+    z-index: 2;
+}
+
+.menu h1 {
+    font-size: 10rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.menu div div {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu button {
+    font-size: 2.5rem;
+    margin: 1rem auto;
+    padding: .5rem;
+    width: 70%;
+    background: #dedede;
+    transition: all .1s linear;
+}
+
+.menu .impossible {
+    color: rgb(150, 8, 8);
+    background: rgb(255, 191, 191);
+}
+
+.menu button:hover {
+    background: #151515;
+    color: #dedede;
+}
+
+.menu span {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.countdown {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(122, 122, 122, 0.699);
+    position: absolute;
+    z-index: 2;
+}
+
+.countdown p {
+    font-size: 25rem;
+}
+
+@media (max-width: 1028px) {
+
+    .menu h1 {
+        font-size: 7rem;
+        margin-bottom: 3rem;
+    }
+
+    .circle {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .success h2 {
+        font-size: 6rem;
+    }
+
+    .success p {
+        font-size: 3rem;
+    }
+    
+    .success button {
+        font-size: 2rem;
+    }
+
+}
+
+/* ANIMATIONS ============================================ */
+
+@keyframes scaleDown {
+
+    33% {
+        transform: scale(1);
+        background: rgb(199, 199, 199);
+    }
+    100% {
+        transform: scale(0);
+        background: rgb(199, 199, 199);
+        opacity: 0;
+    }
+
+}
+
+@keyframes scaleUp {
+
+    50% {
+        background: rgb(92, 92, 92);
+    }
+    100% {
+        transform: scale(1);
+    }
+
+}
